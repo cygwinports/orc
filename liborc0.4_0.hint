@@ -1,0 +1,9 @@
+category: Libs
+requires: libgcc1
+external-source: orc
+sdesc: "Optimized Inner Loops Runtime Compiler library (runtime)"
+ldesc: "Orc is a library and set of tools for compiling and executing
+very simple programs that operate on arrays of data.  The language
+is a generic assembly language that represents many of the features
+available in SIMD architectures, including saturated addition and
+subtraction, and many arithmetic operations."

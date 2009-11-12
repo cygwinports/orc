@@ -1,0 +1,56 @@
+orc
+------------------------------------------
+Orc is a library and set of tools for compiling and executing
+very simple programs that operate on arrays of data.  The language
+is a generic assembly language that represents many of the features
+available in SIMD architectures, including saturated addition and
+subtraction, and many arithmetic operations.
+
+Runtime requirements:
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  gtk-doc-1.11-2
+  libtool-2.2.7a-14
+  make-3.81-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.schleef.org/
+
+Canonical download:
+  http://www.schleef.org/orc/download/
+
+-------------------------------------------
+
+Build instructions:
+  unpack orc-0.4.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./orc-0.4.2-X.cygport all
+
+This will create:
+  /usr/src/liborc0.4-devel-0.4.2-X.tar.bz2
+  /usr/src/liborc0.4_0-0.4.2-X.tar.bz2
+  /usr/src/orc-0.4.2-X-src.tar.bz2
+  /usr/src/orc-0.4.2-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.4.2-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
