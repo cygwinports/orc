@@ -1,6 +1,6 @@
 DESCRIPTION="Optimized Inner Loops Resource Compiler"
-HOMEPAGE="http://www.schleef.org/"
-SRC_URI="http://www.schleef.org/orc/download/${P}.tar.gz"
+HOMEPAGE="http://code.entropywave.com/projects/orc/"
+SRC_URI="http://code.entropywave.com/download/orc/${P}.tar.gz"
 
 PKG_NAMES="orc liborc0.4_0 liborc0.4-devel"
 orc_CONTENTS="usr/lib/orc/ usr/share/doc/"

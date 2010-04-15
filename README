@@ -7,19 +7,19 @@ available in SIMD architectures, including saturated addition and
 subtraction, and many arithmetic operations.
 
 Runtime requirements:
-  cygwin-1.7.0-62
-  libgcc1-4.3.4-1
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
+  autoconf2.5-2.65-1
+  automake1.11-1.11.1-1
   binutils-2.19.51-1
-  cygport-0.9.9-1
+  cygport-0.9.81-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
+  gcc4-core-4.3.4-3
   gtk-doc-1.11-2
-  libtool-2.2.7a-14
+  libtool-2.2.7a-15
   make-3.81-2
   sed-4.1.5-2
 
@@ -32,21 +32,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack orc-0.4.2-X-src.tar.bz2
+  unpack orc-0.4.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./orc-0.4.2-X.cygport all
+  cygport ./orc-0.4.3-X.cygport all
 
 This will create:
-  /usr/src/liborc0.4-devel-0.4.2-X.tar.bz2
-  /usr/src/liborc0.4_0-0.4.2-X.tar.bz2
-  /usr/src/orc-0.4.2-X-src.tar.bz2
-  /usr/src/orc-0.4.2-X.tar.bz2
+  /usr/src/liborc0.4-devel-0.4.3-X.tar.bz2
+  /usr/src/liborc0.4_0-0.4.3-X.tar.bz2
+  /usr/src/orc-0.4.3-X-src.tar.bz2
+  /usr/src/orc-0.4.3-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 0.4.3-1 -----
+Version bump.
 
 ----- version 0.4.2-1 -----
 Initial release for Cygwin 1.7.
