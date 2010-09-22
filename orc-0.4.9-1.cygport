@@ -5,5 +5,5 @@ SRC_URI="http://code.entropywave.com/download/orc/${P}.tar.gz"
 PKG_NAMES="orc liborc0.4_0 liborc0.4-devel"
 orc_CONTENTS="usr/lib/orc/ usr/share/doc/"
 liborc0_4_0_CONTENTS="usr/bin/*-0.4-0.dll"
-liborc0_4_devel_CONTENTS="usr/bin/orcc.exe usr/include/ usr/lib/lib*
+liborc0_4_devel_CONTENTS="usr/bin/*.exe usr/include/ usr/lib/lib*
                           usr/lib/pkgconfig usr/share/gtk-doc/"
