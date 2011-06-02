@@ -2,7 +2,7 @@ DESCRIPTION="Optimized Inner Loops Resource Compiler"
 HOMEPAGE="http://code.entropywave.com/projects/orc/"
 SRC_URI="http://code.entropywave.com/download/orc/${P}.tar.gz"
 
-PKG_NAMES="orc liborc0.4_0 liborc0.4-devel"
+PKG_NAMES="liborc0.4_0 liborc0.4-devel"
 liborc0_4_0_CONTENTS="usr/bin/*-0.4-0.dll usr/share/doc/"
 liborc0_4_devel_CONTENTS="usr/bin/*.exe usr/include/ usr/lib/lib*
                           usr/lib/pkgconfig usr/share/gtk-doc/"
