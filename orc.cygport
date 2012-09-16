@@ -1,0 +1,19 @@
+NAME="orc"
+VERSION=0.4.16
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Optimized Inner Loops Resource Compiler"
+DESCRIPTION="Orc is a library and set of tools for compiling and executing
+very simple programs that operate on arrays of data.  The language
+is a generic assembly language that represents many of the features
+available in SIMD architectures, including saturated addition and
+subtraction, and many arithmetic operations."
+HOMEPAGE="http://code.entropywave.com/projects/orc/"
+SRC_URI="http://code.entropywave.com/download/orc/${P}.tar.gz"
+
+PKG_NAMES="liborc0.4_0 liborc0.4-devel"
+liborc0_4_0_CONTENTS="usr/bin/*-0.4-0.dll usr/share/doc/"
+liborc0_4_devel_CONTENTS="usr/bin/*.exe usr/include/ usr/lib/lib*
+                          usr/lib/pkgconfig usr/share/aclocal/ usr/share/gtk-doc/"
+
+KEEP_LA_FILES="none"
