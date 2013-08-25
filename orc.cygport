@@ -1,5 +1,5 @@
 NAME="orc"
-VERSION=0.4.17
+VERSION=0.4.18
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Optimized Inner Loops Resource Compiler"
