@@ -1,0 +1,53 @@
+--- origsrc/orc-0.4.18/m4/as-host-defines.m4	2013-02-19 19:39:37.000000000 -0600
++++ src/orc-0.4.18/m4/as-host-defines.m4	2013-11-12 04:43:01.294679200 -0600
+@@ -39,6 +39,10 @@ AM_CONDITIONAL(HAVE_ARM, test "x$HAVE_AR
+ AM_CONDITIONAL(HAVE_MIPSEL, test "x$HAVE_MIPSEL" = "xyes")
+ 
+   case "${host_os}" in
++    cygwin*)
++      HAVE_OS_CYGWIN=yes
++      AC_DEFINE(HAVE_OS_CYGWIN, 1, [Defined if host OS is Cygwin])
++      ;;
+     mingw*)
+       HAVE_OS_WIN32=yes
+       AC_DEFINE(HAVE_OS_WIN32, 1, [Defined if host OS is MS Windows])
+--- origsrc/orc-0.4.18/orc/orcprogram-mmx.c	2013-08-02 15:49:16.000000000 -0500
++++ src/orc-0.4.18/orc/orcprogram-mmx.c	2013-11-12 04:44:02.247165400 -0600
+@@ -171,7 +171,7 @@ orc_compiler_mmx_init (OrcCompiler *comp
+     compiler->save_regs[X86_R13] = 1;
+     compiler->save_regs[X86_R14] = 1;
+     compiler->save_regs[X86_R15] = 1;
+-#ifdef HAVE_OS_WIN32
++#if defined(HAVE_OS_WIN32) || defined(HAVE_OS_CYGWIN)
+     compiler->save_regs[X86_EDI] = 1;
+     compiler->save_regs[X86_ESI] = 1;
+     for(i=X86_MM0+6;i<X86_MM0+16;i++){
+@@ -199,7 +199,7 @@ orc_compiler_mmx_init (OrcCompiler *comp
+   }
+ 
+   if (compiler->is_64bit) {
+-#ifdef HAVE_OS_WIN32
++#if defined(HAVE_OS_WIN32) || defined(HAVE_OS_CYGWIN)
+     compiler->exec_reg = X86_ECX;
+     compiler->gp_tmpreg = X86_EDX;
+ #else
+--- origsrc/orc-0.4.18/orc/orcprogram-sse.c	2013-08-02 15:49:16.000000000 -0500
++++ src/orc-0.4.18/orc/orcprogram-sse.c	2013-11-12 04:44:24.438434700 -0600
+@@ -171,7 +171,7 @@ orc_compiler_sse_init (OrcCompiler *comp
+     compiler->save_regs[X86_R13] = 1;
+     compiler->save_regs[X86_R14] = 1;
+     compiler->save_regs[X86_R15] = 1;
+-#ifdef HAVE_OS_WIN32
++#if defined(HAVE_OS_WIN32) || defined(HAVE_OS_CYGWIN)
+     compiler->save_regs[X86_EDI] = 1;
+     compiler->save_regs[X86_ESI] = 1;
+     for(i=X86_XMM0+6;i<X86_XMM0+16;i++){
+@@ -199,7 +199,7 @@ orc_compiler_sse_init (OrcCompiler *comp
+   }
+ 
+   if (compiler->is_64bit) {
+-#ifdef HAVE_OS_WIN32
++#if defined(HAVE_OS_WIN32) || defined(HAVE_OS_CYGWIN)
+     compiler->exec_reg = X86_ECX;
+     compiler->gp_tmpreg = X86_EDX;
+ #else

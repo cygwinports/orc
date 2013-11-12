@@ -1,6 +1,6 @@
 NAME="orc"
 VERSION=0.4.18
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Optimized Inner Loops Resource Compiler"
 DESCRIPTION="Orc is a library and set of tools for compiling and executing
@@ -10,10 +10,13 @@ available in SIMD architectures, including saturated addition and
 subtraction, and many arithmetic operations."
 HOMEPAGE="http://code.entropywave.com/projects/orc/"
 SRC_URI="http://code.entropywave.com/download/orc/orc-${VERSION}.tar.gz"
+PATCH_URI="0.4.18-cygwin.patch"
 
-PKG_NAMES="liborc0.4_0 liborc0.4-devel"
+PKG_NAMES="liborc0.4_0 liborc0.4-devel liborc0.4-doc"
 liborc0_4_0_CONTENTS="usr/bin/*-0.4-0.dll usr/share/doc/"
 liborc0_4_devel_CONTENTS="usr/bin/*.exe usr/include/ usr/lib/lib*
-                          usr/lib/pkgconfig usr/share/aclocal/ usr/share/gtk-doc/"
+                          usr/lib/pkgconfig usr/share/aclocal/"
+liborc0_4_doc_CATEGORY="Doc"
+liborc0_4_doc_CONTENTS="usr/share/gtk-doc/"
 
 KEEP_LA_FILES="none"
