@@ -1,6 +1,8 @@
+inherit gnome2
+
 NAME="orc"
-VERSION=0.4.18
-RELEASE=2
+VERSION=0.4.23
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Optimized Inner Loops Resource Compiler"
 DESCRIPTION="Orc is a library and set of tools for compiling and executing
@@ -8,8 +10,8 @@ very simple programs that operate on arrays of data.  The language
 is a generic assembly language that represents many of the features
 available in SIMD architectures, including saturated addition and
 subtraction, and many arithmetic operations."
-HOMEPAGE="http://code.entropywave.com/projects/orc/"
-SRC_URI="http://code.entropywave.com/download/orc/orc-${VERSION}.tar.gz"
+HOMEPAGE="http://gstreamer.freedesktop.org/"
+SRC_URI="http://gstreamer.freedesktop.org/src/orc/orc-${VERSION}.tar.xz"
 PATCH_URI="0.4.18-cygwin.patch"
 
 PKG_NAMES="liborc0.4_0 liborc0.4-devel liborc0.4-doc"
