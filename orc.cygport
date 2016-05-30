@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="orc"
-VERSION=0.4.23
+VERSION=0.4.25
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Optimized Inner Loops Resource Compiler"
